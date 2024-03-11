@@ -8,10 +8,8 @@ import Form from 'react-bootstrap/Form';
 
 
 function App() {
-  //const [offset, setOffset] = useState(0);
   const [limit, setLimit] = useState(50);
   const [products, setProducts] = useState([]);
-  //const [page, setPage] = useState(2);
   const [pages, setPages] = useState([]);
   const [isSearching, setIsSearching] = useState(true);
   const [isEmpty, setIsEmpty] = useState(false);
@@ -38,7 +36,6 @@ function App() {
     dateStr += date.getMonth() + 1;
     if (date.getDate() < 10) dateStr += '0';
     dateStr += date.getDate();
-    // console.log(dateStr);
     let password = MD5('Valantis_' + dateStr);
     fetch('http://api.valantis.store:40000', {
       method: 'POST',
@@ -143,7 +140,6 @@ function App() {
       return data['result'].indexOf(item) == pos;
     });
     lastPage.current = Math.floor((uniqIds.current.length - 1) / 50) + 1;
-    //setItems();
     showProducts();
   }
 
@@ -177,7 +173,6 @@ function App() {
   }
 
   let onProductBrandChange = (key) => {
-    //console.log(key.key);
     document.getElementById('product_price').value = '';
     document.getElementById('product_name').value = '';
     if (key.key == 'Enter') {
@@ -194,7 +189,6 @@ function App() {
 
   useEffect(() => {
     getData("get_ids", {}, getProducts);
-    // getData('filter', {/* "product": "кольцо", */"price": 35000.0 }, getProducts);
   }, []);
 
   return (
