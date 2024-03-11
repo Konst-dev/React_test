@@ -1,6 +1,7 @@
 {
   "name": "valantis_test",
   "version": "0.1.0",
+  "homepage": "https://konst-dev.github.io/ReactBuildTest",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
