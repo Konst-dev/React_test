@@ -37,7 +37,7 @@ function App() {
     if (date.getDate() < 10) dateStr += '0';
     dateStr += date.getDate();
     let password = MD5('Valantis_' + dateStr);
-    fetch('http://api.valantis.store:40000', {
+    fetch('https://api.valantis.store:41000', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
