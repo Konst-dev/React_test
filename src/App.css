@@ -2,37 +2,57 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card_wrapper {
+  /* width: 480px;
+  height: 250px; */
+  box-sizing: border-box;
+  margin: 0 10px 10px 0;
+  padding: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card_wrapper:hover {
+  box-shadow: 10px 10px 5px #FFCCCC;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.products_container {
+  width: 1000px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+.page_container {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+  margin-bottom: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main_container {
+  width: 1280px;
+  display: flex;
+  justify-content: start;
+  flex-wrap: nowrap;
+}
+
+.filters_container {
+  width: 250px;
+  text-align: left;
+  padding: 10px;
+  background-color: #ffffee;
+}
+
+.main_info {
+  width: 1000px;
+}
+
+.filters_block {
+  margin-top: 100px;
+}
+
+.searching {
+  width: 980px;
+  text-align: center;
+  height: 1000px;
 }
